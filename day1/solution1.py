@@ -27,4 +27,4 @@ def return_max(filename):
 
     return max_calories
 
-return_max('day1/input.txt')
+print(return_max('day1/input.txt'))

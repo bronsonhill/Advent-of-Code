@@ -14,7 +14,6 @@ def return_max(filename):
     # it in max_calories
     with open(filename) as fp:
         for line in fp.readlines():
-
             # when its a new elf, checks if maximum then resets counter
             if line == '\n':
                 total_calories.append(calorie_counter)
@@ -22,8 +21,9 @@ def return_max(filename):
             
             else: 
                 calorie_counter += int(line)
-    print(total_calories)
+            
     total_calories.sort(reverse=True)
+    print(total_calories)
     return sum(total_calories[0:3])
 
 print(return_max('day1/input.txt'))
